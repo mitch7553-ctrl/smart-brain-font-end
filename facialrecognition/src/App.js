@@ -7,6 +7,10 @@ import Rank from './components/Rank/Rank';
 import ParticlesBg from 'particles-bg';
 
 class App extends Component {
+  // constructor () {
+  //   super() 
+  //   this.state
+  // }
   render() {
     return (
     <div className="App">
