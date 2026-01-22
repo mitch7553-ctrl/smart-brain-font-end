@@ -21,3 +21,57 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+# =========================
+# Node / npm
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Build outputs
+# =========================
+build/
+dist/
+coverage/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# OS / Editor files
+# =========================
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Git artifacts
+# =========================
+*.orig
+
+# =========================
+# Optional: lock files (comment out if you want them tracked)
+# =========================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
