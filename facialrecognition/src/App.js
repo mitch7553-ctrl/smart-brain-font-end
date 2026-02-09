@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import Particles from 'react-particles-js'; 
 import ParticlesBg from 'particles-bg'
-import Clarifai from 'clarifai';
+//import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
@@ -15,7 +15,7 @@ const MODEL_ID = 'face-detection';
 
 const returnClarifaiRequestOptions = (imageUrl) => {
 
-  const PAT = 'ab30b89826a04443bd34c99782fd4405';
+  const PAT = '1698e5305d1f4389885e95b4334811a6';
 
   const USER_ID = 'clarifai';       
   const APP_ID = 'main';
@@ -78,6 +78,7 @@ class App extends Component {
       joined: data.joined
     }})
   }
+
 
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
