@@ -13,6 +13,8 @@ import './App.css';
 
 const MODEL_ID = 'face-detection';
 
+ 
+
 const returnClarifaiRequestOptions = (imageUrl) => {
 
   const PAT = '1698e5305d1f4389885e95b4334811a6';
@@ -142,7 +144,18 @@ class App extends Component {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
       <div className="App">
-        <ParticlesBg type="fountain" bg={true} />
+        <ParticlesBg
+        color="#d4edeee0"
+         num={80} 
+        type="color" bg={{
+          position: "fixed",
+          left: "0px",
+          right:"0px",
+          top:"0px",
+          bottom:"0px",
+          zIndex:  -1,
+          width: '100%'
+        }} />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         { route === 'home'
           ? <div>
