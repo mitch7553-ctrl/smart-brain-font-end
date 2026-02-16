@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Signin extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,7 @@ class Signin extends React.Component {
 
   onSubmitSignIn = () => {
     fetch('http://localhost:3000/signin', {
-      method: 'post',
+      method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.signInEmail,
@@ -39,7 +38,7 @@ class Signin extends React.Component {
   render() {
     const { onRouteChange } = this.props;
     return (
-      <form className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+      <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main className="pa4 black-80">
           <div className="measure">
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -47,7 +46,7 @@ class Signin extends React.Component {
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                 <input
-                  className="pa2 input-reset ba hover-bg-black hover-white w-100 bg-transparent"
+                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="email"
                   name="email-address"
                   id="email-address"
@@ -57,7 +56,7 @@ class Signin extends React.Component {
               <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                 <input
-                  className="b pa2 input-reset ba hover-bg-black hover-white w-100 bg-transparent"
+                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
                   id="password"
@@ -68,7 +67,7 @@ class Signin extends React.Component {
             <div className="">
               <input
                 onClick={this.onSubmitSignIn}
-                className="b ph3 pv2 input-reset ba b--black pointer f6 dib grow bg-transparent"
+                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Sign in"
               />
@@ -78,7 +77,7 @@ class Signin extends React.Component {
             </div>
           </div>
         </main>
-      </form>
+      </article>
     );
   }
 }
